@@ -1,15 +1,6 @@
-import { faker } from '@faker-js/faker'
+import reviewers from '@/data/reviews'
 
 export default function Community() {
-  const review = () => {
-    return {
-      pfp: faker.image.avatar(),
-      fullName: faker.person.fullName(),
-      jobTitle: faker.person.jobTitle(),
-      review: faker.lorem.sentences({ min: 1, max: 3 }),
-    }
-  }
-
   return (
     <section className="inset-0 flex w-full flex-col items-center justify-center border-b-2 border-b-black bg-white bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px] font-base">
       <div className="mx-auto w-container max-w-full px-5 py-20 lg:py-[100px]">
@@ -18,9 +9,9 @@ export default function Community() {
         </h2>
         <div className="w900:grid-cols-1 w900:gap-0 grid grid-cols-3 gap-4 lg:gap-8">
           {[
-            [review(), review()],
-            [review(), review(), review()],
-            [review(), review()],
+            [reviewers[0], reviewers[1]],
+            [reviewers[2], reviewers[3], reviewers[4]],
+            [reviewers[5], reviewers[6]],
           ].map((card, index) => (
             <div className="group flex flex-col justify-center" key={index}>
               {card.map(({ jobTitle, pfp, fullName, review }, index) => (
@@ -40,7 +31,7 @@ export default function Community() {
                       <p className="text-sm font-base">{jobTitle}</p>
                     </div>
                   </div>
-                  <div className="mt-5">{review}</div>
+                  <div className="mt-5 break-words">{review}</div>
                 </div>
               ))}
             </div>

@@ -9,40 +9,42 @@ export default function Pricing() {
         </h2>
         <div className="w900:grid-cols-1 w900:w-2/3 w900:mx-auto w500:w-full grid grid-cols-3 gap-8">
           <PricingPlan
-            planName="Basic"
-            description="Lorem ipsum dolor sit amet"
-            price="10"
+            planName="Free"
+            description="Ideal for individual developers starting with software verification."
+            price="0"
             perks={[
-              '5 products',
-              'Up to 1,000 subscribers',
+              '1 project',
+              'Up to 100 verifications',
               'Basic analytics',
-              '48-hour support response time',
+              'Community support',
             ]}
           />
           <PricingPlan
-            planName="Essential"
-            description="Lorem ipsum dolor sit amet"
+            planName="Pro"
+            description="Best for growing teams needing advanced features."
             price="25"
             perks={[
-              '25 products',
-              'Up to 10,000 subscribers',
+              '25 projects',
+              'Up to 10,000 verifications',
+              'Self-healing code engine',
               'Advanced analytics',
               '24-hour support response time',
-              'Marketing automations',
+              'Integration with CI/CD tools',
             ]}
             mostPopular
           />
           <PricingPlan
-            planName="Growth"
-            description="Lorem ipsum dolor sit amet"
-            price="50"
+            planName="Enterprise"
+            description="Perfect for large enterprises with custom needs."
+            price="Contact us"
             perks={[
-              'Unlimited products',
-              'Unlimited subscribers',
+              'Unlimited projects',
+              'Unlimited verifications',
+              'Self-healing code engine',
               'Advanced analytics',
               '1-hour, dedicated support response time',
-              'Marketing automations',
-              'Custom reporting tools',
+              'Custom integrations',
+              'Priority feature requests',
             ]}
           />
         </div>

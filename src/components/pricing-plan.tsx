@@ -28,8 +28,14 @@ export default function PricingPlan({
         </div>
         <p className="mb-3 mt-1">{description}</p>
         <div>
-          <span className="text-3xl font-heading">${price}</span>{' '}
-          <span>/month</span>{' '}
+          {price !== 'Contact us' ? (
+            <>
+              <span className="text-3xl font-heading">${price}</span>{' '}
+              <span>/month</span>{' '}
+            </>
+          ) : (
+            <span className="text-3xl font-heading">{price}</span>
+          )}
         </div>
         <ul className="mt-8 flex flex-col gap-2">
           {perks.map((perk) => {
@@ -41,12 +47,19 @@ export default function PricingPlan({
           })}
         </ul>
       </div>
-      <Button
-        size={mostPopular ? 'lg' : 'default'}
-        className={cn('mt-12 w-full', mostPopular && 'bg-black text-white')}
+      <a
+        href="https://calendly.com/saurabhchalke/30min"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-12 w-full"
       >
-        Buy Plan
-      </Button>
+        <Button
+          size={mostPopular ? 'lg' : 'default'}
+          className={cn('w-full', false && 'bg-black text-white')}
+        >
+          {price === 'Contact us' ? 'Contact Us' : 'Buy Plan'}
+        </Button>
+      </a>
     </div>
   )
 }

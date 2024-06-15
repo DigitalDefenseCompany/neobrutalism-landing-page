@@ -17,35 +17,27 @@ export default function Faq() {
         <div className="mx-auto grid w-[700px] max-w-full px-5">
           <Accordion className="text-base sm:text-lg" type="single" collapsible>
             <AccordionItem className="mb-2" value="item-1">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>What is VeriGood.ai?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                VeriGood.ai is an AI-powered software verification platform that automates the process of ensuring security and reliability in software applications.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem className="mb-2" value="item-2">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>How does VeriGood.ai improve software security?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                VeriGood.ai uses AI models to automatically generate formal specifications, guide verification, and refactor code to fix vulnerabilities, making software security more efficient and accessible.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem className="mb-2" value="item-3">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>Who can benefit from using VeriGood.ai?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                Software developers, development firms, and large enterprises across various industries can benefit from using VeriGood.ai to enhance the security and reliability of their applications.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>When is the public beta launch of VeriGood.ai?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                The public beta launch of VeriGood.ai is scheduled for July 2024. Join our community to stay updated and be among the first to experience our platform.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -62,7 +54,7 @@ export default function Faq() {
               return (
                 <div className="flex items-center" key={id}>
                   <span className="mx-10 text-xl font-heading sm:text-2xl lg:text-4xl">
-                    Neobrutalism components
+                    VeriGood.ai - Build Bulletproof Software
                   </span>
                   <img
                     className="w-[35px] sm:w-[45px]"

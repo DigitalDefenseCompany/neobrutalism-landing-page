@@ -4,15 +4,19 @@ import Header from '@/sections/header'
 import Faq from '@/sections/faq'
 import Pricing from '@/sections/pricing'
 import Footer from '@/components/footer'
+import Navbar from '@/components/navbar/navbar'
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Features />
-      <Community />
-      <Faq />
-      <Pricing />
+      <Navbar />
+      <div className="pt-[88px] m500:pt-16">
+        <Header />
+        <Features />
+        <Community />
+        <Faq />
+        <Pricing />
+      </div>
       <Footer />
     </>
   )
