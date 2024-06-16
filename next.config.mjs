@@ -6,6 +6,8 @@ import codeImport from 'remark-code-import'
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  output: 'export',
+  distDir: 'out',
 }
 
 const withMDX = createMDX({
