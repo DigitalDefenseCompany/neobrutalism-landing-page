@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="pt-[88px] m500:pt-16">
-        <Header />
-        <Features />
-        <Community />
-        <Faq />
-        <Pricing />
-      </div>
+      <div id="drawer"></div>
+      <div id="modal"></div>
+      <Header />
+      <Features />
+      <Community />
+      <Faq />
+      <Pricing />
       <Footer />
     </>
   )

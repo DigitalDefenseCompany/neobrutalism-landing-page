@@ -3,8 +3,6 @@
 import clsx from 'clsx'
 import { ChevronDown } from 'lucide-react'
 import { useState } from 'react'
-import Link from 'next/link'
-import arrow from '@public/svgs/arrow.svg'
 
 export default function NavDropdown() {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,18 +31,19 @@ export default function NavDropdown() {
           'absolute flex w-[150px] flex-col rounded-base border-2 border-black bg-white text-lg font-base transition-all',
         )}
       >
-        <Link
-          href={'/products/verigoodai'}
-          onClick={() => setIsOpen(false)}
+        <a
+          href="https://github.com/apps/verigood-ai"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-left flex items-center rounded-t-base px-4 py-3 border-b-2 border-b-black hover:bg-main"
         >
           VeriGood.ai
           <img
             className="ml-[15px] w-[14px] m400:ml-4 m400:w-[12px]"
-            src={arrow.src}
+            src={'/svgs/arrow.svg'}
             alt="arrow"
           />
-        </Link>
+        </a>
       </div>
     </div>
   )

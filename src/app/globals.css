@@ -1,3 +1,5 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,5 +30,34 @@ body::-webkit-scrollbar-thumb {
 @supports not selector(::-webkit-scrollbar) {
   body {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.header-text {
+  font-size: 1.5rem; /* Adjust based on your design */
+}
+
+@media (max-width: 500px) {
+  .header-text {
+    font-size: 1.25rem;
+  }
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+}
+
+@media (max-width: 500px) {
+  .text-4xl {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+  }
+}
+
+@media (max-width: 400px) {
+  .text-4xl {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
   }
 }

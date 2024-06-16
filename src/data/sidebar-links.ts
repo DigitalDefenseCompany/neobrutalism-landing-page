@@ -1,5 +1,4 @@
 const MAIN_SIDEBAR = [
-  'Getting started',
   {
     href: '/docs',
     text: 'Introduction',
@@ -11,11 +10,6 @@ const MAIN_SIDEBAR = [
   {
     href: '/docs/resources',
     text: 'Resources',
-  },
-  'Products',
-  {
-    href: '/products/verigoodai',
-    text: 'VeriGood.ai',
   },
 ]
 

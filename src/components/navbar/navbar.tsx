@@ -6,13 +6,13 @@ import MobileDrawer from './mobile-drawer'
 
 function Navbar() {
   return (
-    <nav className="fixed left-0 top-0 z-20 mx-auto flex h-[88px] w-full items-center border-b-4 border-black bg-white px-5 m500:h-16 ">
+    <nav className="fixed left-0 top-0 z-20 mx-auto flex h-[88px] w-full items-center border-b-4 border-black bg-white px-5 m500:h-16">
       <div className="mx-auto flex w-[1300px] max-w-full items-center justify-between">
         <MobileDrawer />
 
         <div className="flex items-center gap-10 m400:flex-1 m400:pl-5">
-          <Link className="text-4xl font-heading m500:text-xl" href={'/'}>
-            The Digital Defense Company
+          <Link className="text-4xl font-heading m500:text-xl m400:text-lg m350:text-base" href="/">
+            Digital Defense Co.
           </Link>
         </div>
 
@@ -22,7 +22,6 @@ function Navbar() {
           </Link>
 
           <NavDropdown />
-
         </div>
 
         <div className="flex w-[160px] items-center justify-end gap-5 m800:w-[unset] m400:gap-3">

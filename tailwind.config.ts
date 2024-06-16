@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import tailwindAnimate from 'tailwindcss-animate'
+import typography from '@tailwindcss/typography'
 
 const config: Config = {
   content: [
@@ -7,6 +8,8 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/markdown/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -58,9 +61,24 @@ const config: Config = {
       screens: {
         w900: { raw: '(max-width: 900px)' },
         w500: { raw: '(max-width: 500px)' },
+        m1500: { raw: '(max-width: 1500px)' },
+        m1300: { raw: '(max-width: 1300px)' },
+        m1100: { raw: '(max-width: 1100px)' },
+        m1000: { raw: '(max-width: 1000px)' },
+        m900: { raw: '(max-width: 900px)' },
+        m850: { raw: '(max-width: 850px)' },
+        m800: { raw: '(max-width: 800px)' },
+        m750: { raw: '(max-width: 750px)' },
+        m700: { raw: '(max-width: 700px)' },
+        m650: { raw: '(max-width: 650px)' },
+        m600: { raw: '(max-width: 600px)' },
+        m550: { raw: '(max-width: 550px)' },
+        m450: { raw: '(max-width: 450px)' },
+        m400: { raw: '(max-width: 400px)' },
+        m350: { raw: '(max-width: 350px)' },
       },
     },
   },
-  plugins: [tailwindAnimate],
+  plugins: [tailwindAnimate, typography],
 }
 export default config

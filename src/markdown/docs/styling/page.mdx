@@ -1,0 +1,24 @@
+import Styling from './Styling'
+import Pagination from '@/components/app/Pagination'
+import Link from 'next/link'
+
+## Styling
+
+<Styling />
+
+<br />
+
+### Customization
+
+Learn more about customization on the <Link href='/docs/resources'>resources</Link> page.
+
+<Pagination
+  prev={{
+    name: 'Introduction',
+    path: '/docs',
+  }}
+  next={{
+    name: 'Resources',
+    path: '/docs/resources',
+  }}
+/>
