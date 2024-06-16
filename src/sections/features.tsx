@@ -5,28 +5,28 @@ export default function Features() {
 
   const features = [
     {
-      title: 'AI-Powered Automation',
-      text: 'Automate the time-consuming process of software verification with advanced AI models.',
+      title: 'AI-Powered Specification Generation',
+      text: 'Utilize large language models to automatically generate high-quality formal specifications from code and requirements.',
+    },
+    {
+      title: 'CI Integration with SMT Solvers',
+      text: 'Integrate with continuous integration pipelines and SMT solvers for automated, seamless verification.',
+    },
+    {
+      title: 'Self-Healing Code Capabilities',
+      text: 'Automatically refactor code and adjust specifications to address vulnerabilities and improve security.',
+    },
+    {
+      title: 'Human-in-the-Loop Verification',
+      text: 'Enable human-in-the-loop mode for reviewing and refining specifications, ensuring accuracy and reliability.',
     },
     {
       title: 'User-Friendly Interface',
-      text: 'An intuitive platform designed to make formal verification accessible to developers of all skill levels.',
+      text: 'An intuitive platform designed for developers of all skill levels, simplifying the formal verification process.',
     },
     {
-      title: 'Intelligent Verification Guidance',
-      text: 'Get real-time suggestions and strategies for effective software verification.',
-    },
-    {
-      title: 'Integration with Development Tools',
-      text: 'Seamlessly integrate VeriGood.ai with popular development frameworks and tools.',
-    },
-    {
-      title: 'Self-Healing Capabilities',
-      text: 'Automatically refactor code and adjust specifications to fix vulnerabilities.',
-    },
-    {
-      title: 'Robust Analytics',
-      text: 'Gain insights into the verification process and software security through comprehensive analytics.',
+      title: 'Comprehensive Analytics',
+      text: 'Gain valuable insights into the verification process and software security with detailed analytics and reporting.',
     },
   ]
 
