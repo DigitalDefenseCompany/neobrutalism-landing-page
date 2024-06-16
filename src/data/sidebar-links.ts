@@ -1,15 +1,12 @@
 const MAIN_SIDEBAR = [
+  'Docs',
   {
     href: '/docs',
     text: 'Introduction',
   },
   {
-    href: '/docs/styling',
-    text: 'Styling',
-  },
-  {
-    href: '/docs/resources',
-    text: 'Resources',
+    href: '/docs/getting-started',
+    text: 'Getting Started',
   },
   'Products',
   {

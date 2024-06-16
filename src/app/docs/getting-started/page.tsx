@@ -1,12 +1,12 @@
-import Styling from '@/markdown/docs/styling/page.mdx'
+import GettingStarted from '@/markdown/docs/getting-started/page.mdx'
 
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Styling',
+  title: 'Getting Started',
   description: 'Customize your software verification process.',
 }
 
 export default function Page() {
-  return <Styling />
+  return <GettingStarted />
 }
