@@ -11,6 +11,12 @@ const MAIN_SIDEBAR = [
     href: '/docs/resources',
     text: 'Resources',
   },
+  'Products',
+  {
+    href: 'https://github.com/apps/verigood-ai',
+    text: 'VeriGood.ai',
+    external: true,
+  },
 ]
 
 export { MAIN_SIDEBAR }

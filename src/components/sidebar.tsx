@@ -6,7 +6,7 @@ export default function Sidebar({ links }: { links: { href: string; text: string
       <ul>
         {links.map((link, index) => (
           <li key={index}>
-            <Link href={link.href}>
+            <Link href={`${link.href}`}>
               {link.text}
             </Link>
           </li>

@@ -1,23 +1,26 @@
-'use client'
+'use client';
 
-import { FaBars } from 'react-icons/fa'
-import { useState } from 'react'
-import { usePathname, useRouter } from 'next/navigation'
-import { MAIN_SIDEBAR } from '@/data/sidebar-links'
-import Drawer from '@/components/ui/drawer'
+import { FaBars } from 'react-icons/fa';
+import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { MAIN_SIDEBAR } from '@/data/sidebar-links';
+import Drawer from '@/components/ui/drawer';
 
 export default function MobileDrawer() {
-  const router = useRouter()
-  const pathname = usePathname()
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isDrawerActive, setIsDrawerActive] = useState(false);
 
-  const ACTIVE_SIDEBAR = MAIN_SIDEBAR
-
-  const [isDrawerActive, setIsDrawerActive] = useState(false)
-
-  const handleLinkClick = (path: string) => {
-    setIsDrawerActive(false)
-    router.push(path)
-  }
+  const handleLinkClick = (path: string, external = false) => {
+    console.log('Clicked on:', path);
+    console.log('External:', external);
+    setIsDrawerActive(false);
+    if (external) {
+      window.open(path, '_blank');
+    } else {
+      router.push(path);
+    }
+  };
 
   return (
     <>
@@ -32,36 +35,33 @@ export default function MobileDrawer() {
 
       <Drawer active={isDrawerActive} setActive={setIsDrawerActive}>
         <div className="scrollbar h-full w-full overflow-y-auto bg-white">
-          {ACTIVE_SIDEBAR.map((item, id) => {
-            return typeof item === 'string' ? (
-              <div
-                key={id}
-                className="sidebaritem block border-b-4 border-r-4 border-black p-4 text-xl font-heading m800:p-4 m800:text-base"
-              >
-                {item}
-              </div>
-            ) : (
-              <button
-                key={id}
-                onClick={() => {
-                  handleLinkClick(item.href)
-                }}
-                className="sidebaritem block w-full border-b-4 border-r-4 border-black p-4 pl-7 text-left text-lg font-base text-black/90 hover:bg-main m800:p-4 m800:pl-6 m800:text-base"
-              >
-                {item.text}
-              </button>
-            )
+          {MAIN_SIDEBAR.map((item, id) => {
+            if (typeof item === 'string') {
+              return (
+                <div
+                  key={id}
+                  className="sidebaritem block border-b-4 border-r-4 border-black p-4 text-xl font-heading m800:p-4 m800:text-base"
+                >
+                  {item}
+                </div>
+              );
+            } else if (item.href) {
+              return (
+                <button
+                  key={id}
+                  onClick={() => handleLinkClick(item.href, item.external)}
+                  className="sidebaritem block w-full border-b-4 border-r-4 border-black p-4 pl-7 text-left text-lg font-base text-black/90 hover:bg-main m800:p-4 m800:pl-6 m800:text-base"
+                >
+                  {item.text}
+                </button>
+              );
+            } else {
+              console.error(`Item ${id} is missing 'href':`, item);
+              return null;
+            }
           })}
-          <button
-            onClick={() => {
-              handleLinkClick('/products')
-            }}
-            className="sidebaritem block w-full border-b-4 border-r-4 border-black p-4 pl-7 text-left text-lg font-base text-black/90 hover:bg-main m800:p-4 m800:pl-6 m800:text-base"
-          >
-            Products
-          </button>
         </div>
       </Drawer>
     </>
-  )
+  );
 }
