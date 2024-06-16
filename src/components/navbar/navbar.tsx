@@ -34,7 +34,7 @@ function Navbar() {
           </a>
           <a
             target="_blank"
-            href="https://x.com/DigiDefCo"
+            href="https://x.com/DigiDefenseCo"
             className="flex items-center justify-center rounded-base border-2 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
           >
             <FaXTwitter className="h-6 w-6 m500:h-4 m500:w-4" />
